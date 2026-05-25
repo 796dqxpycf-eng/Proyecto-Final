@@ -1,11 +1,6 @@
-*/
+
 ========================================================
  PROYECTO FINAL
- 
- Saul Villanueva Elias
- Emiliano Olaya Tobias
- Gael Hurtado
- 
  Convertidor Buck Sincrónico usando STM32
 
 Descripción:
@@ -20,7 +15,7 @@ salida de manera eficiente y segura.
 
 
  FUNCIONAMIENTO GENERAL
-
+========================================================
 
 Panel Solar → Convertidor Buck → Filtro LC → Carga
 
@@ -35,7 +30,7 @@ Vout = D × Vin
 
 
  COMPONENTES PRINCIPALES
-
+========================================================
 
 STM32F103C8T6
 → Control principal del sistema
@@ -57,6 +52,7 @@ Capacitores
 
 
  ADC Y MONITOREO
+========================================================
 
 El ADC del STM32 mide:
 
@@ -69,7 +65,7 @@ se utilizan divisores resistivos para protección.
 
 
  PROTECCIONES
-
+========================================================
 
 - Protección por sobrecorriente
 - Protección por sobrevoltaje
@@ -80,6 +76,7 @@ Si ocurre una falla:
 
 
  PCB EN KICAD
+========================================================
 
 El PCB fue diseñado considerando:
 
@@ -91,11 +88,13 @@ El PCB fue diseñado considerando:
 
 
  RESULTADOS ESPERADOS
-
+========================================================
 
 - Regulación estable del voltaje
 - Alta eficiencia energética
 - Protección del sistema
 - Monitoreo en tiempo real
+
+
 
 
