@@ -2,7 +2,6 @@
 ========================================================
  PROYECTO FINAL
  Convertidor Buck Sincrónico usando STM32
-========================================================
 
 Descripción:
 Este proyecto consiste en el diseño e implementación
@@ -14,9 +13,9 @@ que controlan MOSFETs de potencia mediante un driver
 IR2110, permitiendo reducir y regular el voltaje de
 salida de manera eficiente y segura.
 
-========================================================
+
  FUNCIONAMIENTO GENERAL
-========================================================
+
 
 Panel Solar → Convertidor Buck → Filtro LC → Carga
 
@@ -29,9 +28,9 @@ La regulación del voltaje depende del Duty Cycle PWM:
 
 Vout = D × Vin
 
-========================================================
+
  COMPONENTES PRINCIPALES
-========================================================
+
 
 STM32F103C8T6
 → Control principal del sistema
@@ -51,9 +50,8 @@ Capacitores
 10mΩ Shunt
 → Medición de corriente
 
-========================================================
+
  ADC Y MONITOREO
-========================================================
 
 El ADC del STM32 mide:
 
@@ -64,9 +62,9 @@ El ADC del STM32 mide:
 Como el ADC soporta máximo 3.3V,
 se utilizan divisores resistivos para protección.
 
-========================================================
+
  PROTECCIONES
-========================================================
+
 
 - Protección por sobrecorriente
 - Protección por sobrevoltaje
@@ -75,9 +73,8 @@ se utilizan divisores resistivos para protección.
 Si ocurre una falla:
 → El PWM se deshabilita automáticamente.
 
-========================================================
+
  PCB EN KICAD
-========================================================
 
 El PCB fue diseñado considerando:
 
@@ -87,14 +84,13 @@ El PCB fue diseñado considerando:
 - Disipación térmica
 - Reducción de ruido EMI
 
-========================================================
+
  RESULTADOS ESPERADOS
-========================================================
+
 
 - Regulación estable del voltaje
 - Alta eficiencia energética
 - Protección del sistema
 - Monitoreo en tiempo real
 
-========================================================
-*/
+
