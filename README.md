@@ -5,14 +5,14 @@
 ========================================================
 
 Descripción:
-Este proyecto consiste en el diseño de un convertidor
-DC-DC tipo Buck para regular la energía de un panel
-solar de aproximadamente 45V y 10A utilizando un
-microcontrolador STM32.
+Este proyecto consiste en el diseño e implementación
+de un convertidor DC-DC tipo Buck para regular la
+energía proveniente de un panel solar de 45V y 10A.
 
-El sistema utiliza PWM para controlar MOSFETs de
-potencia mediante un driver IR2110, permitiendo
-regular el voltaje de salida de forma eficiente.
+El sistema utiliza un STM32 para generar señales PWM
+que controlan MOSFETs de potencia mediante un driver
+IR2110, permitiendo reducir y regular el voltaje de
+salida de manera eficiente y segura.
 
 ========================================================
  FUNCIONAMIENTO GENERAL
@@ -22,10 +22,10 @@ Panel Solar → Convertidor Buck → Filtro LC → Carga
 
 STM32 → Driver IR2110 → MOSFETs
 
-El STM32 genera señales PWM de aproximadamente
-50kHz para controlar la conmutación de los MOSFETs.
+El convertidor Buck reduce el voltaje de entrada
+utilizando conmutación de alta frecuencia (~50kHz).
 
-La regulación del voltaje depende del Duty Cycle:
+La regulación del voltaje depende del Duty Cycle PWM:
 
 Vout = D × Vin
 
@@ -46,7 +46,7 @@ IRFP460PBF
 → Inductor principal
 
 Capacitores
-→ Reducción de ripple y filtrado
+→ Filtrado y reducción de ripple
 
 10mΩ Shunt
 → Medición de corriente
@@ -61,8 +61,8 @@ El ADC del STM32 mide:
 - Voltaje de salida
 - Corriente
 
-El ADC soporta máximo 3.3V,
-por ello se utilizan divisores resistivos.
+Como el ADC soporta máximo 3.3V,
+se utilizan divisores resistivos para protección.
 
 ========================================================
  PROTECCIONES
@@ -86,6 +86,15 @@ El PCB fue diseñado considerando:
 - Separación potencia/control
 - Disipación térmica
 - Reducción de ruido EMI
+
+========================================================
+ RESULTADOS ESPERADOS
+========================================================
+
+- Regulación estable del voltaje
+- Alta eficiencia energética
+- Protección del sistema
+- Monitoreo en tiempo real
 
 ========================================================
 */
