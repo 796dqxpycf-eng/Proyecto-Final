@@ -1,6 +1,11 @@
-/*
+
 ========================================================
  PROYECTO FINAL
+ 
+ Saul Villanueva Elias
+ Emiliano Olaya Tobias
+ Gael Hurtado
+ 
  Convertidor Buck Sincrónico usando STM32
 
 Descripción:
