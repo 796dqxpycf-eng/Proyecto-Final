@@ -19,8 +19,11 @@ energía eficiente y estable.
 
 Durante el proyecto se realizaron prácticas de:
 •⁠  ⁠Blink LED
+
 •⁠  ⁠PWM complementario
+
 •⁠  ⁠Control con driver IR2110
+
 •⁠  ⁠ADC y monitoreo
 
 
