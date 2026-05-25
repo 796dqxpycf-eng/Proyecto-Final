@@ -18,6 +18,7 @@ un driver IR2110, permitiendo una conversión de
 energía eficiente y estable.
 
 Durante el proyecto se realizaron prácticas de:
+
 •⁠  ⁠Blink LED
 
 •⁠  ⁠PWM complementario
