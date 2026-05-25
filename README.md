@@ -4,9 +4,9 @@
  Convertidor Buck Sincrónico usando STM32
 ========================================================
 
-Saul Villanueva Elias
-Emiliano Olaya Tobias
-Gael Hurtado
+Saul Villanueva Elias,
+Emiliano Olaya Tobias,
+Gael Hurtado,
  
 Descripción:
 Este proyecto consiste en el diseño e implementación
