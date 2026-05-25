@@ -6,7 +6,7 @@
 
 Saul Villanueva Elias,
 Emiliano Olaya Tobias,
-Gael Hurtado,
+Gael Hurtado.
  
 Descripción:
 Este proyecto consiste en el diseño e implementación
