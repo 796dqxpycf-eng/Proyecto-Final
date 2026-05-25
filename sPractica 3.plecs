@@ -1,0 +1,778 @@
+Plecs {
+  Name          "practica 3"
+  Version       "4.9"
+  CircuitModel  "ContStateSpace"
+  StartTime     "0.0"
+  TimeSpan      "1.0"
+  Timeout       ""
+  Solver        "auto"
+  MaxStep       "1e-3"
+  InitStep      "-1"
+  FixedStep     "1e-3"
+  Refine        "1"
+  ZCStepSize    "1e-9"
+  RelTol        "1e-3"
+  AbsTol        "-1"
+  TurnOnThreshold "0"
+  NonIdealSwitchResistance "1"
+  SyncFixedStepTasks "2"
+  UseSingleCommonBaseRate "2"
+  LossVariableLimitExceededMsg "3"
+  NegativeSwitchLossMsg "3"
+  DivisionByZeroMsg "3"
+  DatatypeOverflowMsg "3"
+  DatatypeInheritanceConflictMsg "2"
+  ContSampleTimeConflictMsg "2"
+  StiffnessDetectionMsg "2"
+  MaxConsecutiveZCs "1000"
+  AlgebraicLoopWithStateMachineMsg "3"
+  AssertionAction "1"
+  FixedPointDatatypeOverride "1"
+  InitializationCommands ""
+  InitialState  "1"
+  SystemState   ""
+  TaskingMode   "1"
+  TaskConfigurations ""
+  CodeGenParameterInlining "2"
+  CodeGenFloatingPointFormat "2"
+  CodeGenAbsTimeUsageMsg "3"
+  CodeGenBaseName ""
+  CodeGenOutputDir ""
+  CodeGenExtraOpts ""
+  CodeGenTarget "Generic"
+  CodeGenTargetSettings ""
+  ExtendedMatrixPrecision "1"
+  MatrixSignificanceCheck "2"
+  RemoveUnusedStateSpaceOutputs "2"
+  EnableStateSpaceSplitting "2"
+  DisplayStateSpaceSplitting "1"
+  DiscretizationMethod "2"
+  ExternalModeSettings ""
+  AlgebraicLoopMethod "1"
+  AlgebraicLoopTolerance "1e-6"
+  ScriptsDialogGeometry ""
+  ScriptsDialogSplitterPos "0"
+  Schematic {
+    Location      [0, 23; 1536, 773]
+    ZoomFactor    2.94117
+    SliderPosition [0, 0]
+    ShowBrowser   off
+    BrowserWidth  100
+    Component {
+      Type          Scope
+      Name          "Scope"
+      Show          on
+      Position      [215, 90]
+      Direction     up
+      Flipped       off
+      LabelPosition south
+      Location      [8, 31; 1528, 787]
+      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
+"G0AQQByAGUAYQAAAAAA/////wAAAF4A////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
+"///wAAAGgA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAABoAP///wAAAAMAAAAAAAAAAPw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAP////8AAABQAP///wAABfAAAALZAAAA"
+"BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
+"AAAAA=="
+      SavedViews    "AAAAAgAAAAA="
+      HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":169,\"Labels\":[],"
+"\"VisualIdxs\":[]}"
+      PlotPalettes  "AAAAAQAAAAEAAAABAAAAAQAAAAEC//8u4P//zMwAAAAAAAEAAAABAAAAA"
+"AEAAAABAAAAAQAAAAEAAAABAAAAAAEAAAABQAgAAAAAAAAAAAABAAAAAQEAAAABAAAAAQAAAAEAAA"
+"ABAv//LuD//8zMAAAAAAABAAAAAQAAAAABAAAAAQAAAAEAAAABAAAAAQAAAAABAAAAAUAIAAAAAAA"
+"AAAAAAQAAAAEB"
+      Axes          "2"
+      TimeRange     "0"
+      ScrollingMode "1"
+      SingleTimeAxis "1"
+      Open          "0"
+      Ts            "-1"
+      SampleLimit   "0"
+      XAxisLabel    "Time / s"
+      ShowLegend    "1"
+      Axis {
+        Name          ""
+        AutoScale     1
+        MinValue      0
+        MaxValue      1
+        Signals       {}
+        SignalTypes   [ ]
+        Untangle      0
+        KeepBaseline  off
+        BaselineValue 0
+      }
+      Axis {
+        Name          ""
+        AutoScale     1
+        MinValue      0
+        MaxValue      1
+        Signals       {}
+        SignalTypes   [ ]
+        Untangle      0
+        KeepBaseline  off
+        BaselineValue 0
+      }
+      Fourier {
+        SingleXAxis       on
+        AxisLabel         "Frequency / Hz"
+        Scaling           0
+        PhaseDisplay      0
+        ShowFourierLegend off
+        Axis {
+          Name          ""
+          AutoScale     1
+          MinValue      0
+          MaxValue      1
+          Signals       {}
+          Untangle      0
+          KeepBaseline  off
+          BaselineValue 0
+        }
+        Axis {
+          Name          ""
+          AutoScale     1
+          MinValue      0
+          MaxValue      1
+          Signals       {}
+          Untangle      0
+          KeepBaseline  off
+          BaselineValue 0
+        }
+      }
+    }
+    Component {
+      Type          Subsystem
+      Name          "Sub"
+      Show          on
+      Position      [90, 110]
+      Direction     up
+      Flipped       off
+      LabelPosition none
+      Frame         [-55, -70; 55, 70]
+      SampleTime    "-1"
+      CodeGenDiscretizationMethod "2"
+      CodeGenTarget "Generic"
+      MaskDisplayLang "2"
+      MaskIconFrame on
+      MaskIconOpaque off
+      MaskIconRotates on
+      Terminal {
+        Type          Output
+        Position      [59, -25]
+        Direction     right
+      }
+      Terminal {
+        Type          Output
+        Position      [59, -15]
+        Direction     right
+      }
+      Schematic {
+        Location      [0, 23; 1536, 773]
+        ZoomFactor    1
+        SliderPosition [0, 0]
+        ShowBrowser   off
+        BrowserWidth  100
+        Component {
+          Type          Constant
+          Name          "Constant"
+          Show          on
+          Position      [150, 140]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+          Frame         [-10, -10; 10, 10]
+          Parameter {
+            Variable      "Value"
+            Value         "0.5"
+            Show          off
+          }
+          Parameter {
+            Variable      "DataType"
+            Value         "10"
+            Show          off
+          }
+        }
+        Component {
+          Type          Reference
+          SrcComponent  "STM32_Lib/PWM"
+          Name          "PWM"
+          Show          on
+          Position      [280, 140]
+          Direction     up
+          Flipped       off
+          LabelPosition south
+          Frame         [-25, -25; 25, 25]
+          Parameter {
+            Variable      "TimUnit"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "CarrierType"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "CarrierFreq"
+            Value         "100e3"
+            Show          off
+          }
+          Parameter {
+            Variable      "CarrierFreqTol"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "DeadTime"
+            Value         "0"
+            Show          off
+          }
+          Parameter {
+            Variable      "ShowEnable"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "FswVar"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "Ch1Mode"
+            Value         "2"
+            Show          off
+          }
+          Parameter {
+            Variable      "Ch1Pol"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "Ch1Port"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "Ch1Pin"
+            Value         "8"
+            Show          off
+          }
+          Parameter {
+            Variable      "Ch1NPort"
+            Value         "2"
+            Show          off
+          }
+          Parameter {
+            Variable      "Ch1NPin"
+            Value         "13"
+            Show          off
+          }
+          Parameter {
+            Variable      "Ch2Mode"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "Ch2Pol"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "Ch2Port"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "Ch2Pin"
+            Value         "9"
+            Show          off
+          }
+          Parameter {
+            Variable      "Ch2NPort"
+            Value         "2"
+            Show          off
+          }
+          Parameter {
+            Variable      "Ch2NPin"
+            Value         "14"
+            Show          off
+          }
+          Parameter {
+            Variable      "Ch3Mode"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "Ch3Pol"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "Ch3Port"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "Ch3Pin"
+            Value         "10"
+            Show          off
+          }
+          Parameter {
+            Variable      "Ch3NPort"
+            Value         "2"
+            Show          off
+          }
+          Parameter {
+            Variable      "Ch3NPin"
+            Value         "15"
+            Show          off
+          }
+          Parameter {
+            Variable      "Ch4Mode"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "Ch4Pol"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "Ch4Port"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "Ch4Pin"
+            Value         "11"
+            Show          off
+          }
+          Parameter {
+            Variable      "Ch4NPort"
+            Value         "3"
+            Show          off
+          }
+          Parameter {
+            Variable      "Ch4NPin"
+            Value         "5"
+            Show          off
+          }
+          Parameter {
+            Variable      "ExternalSync"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "SyncTriggerType"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "AdcTrigger"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "TaskTrigger"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "RepCtrPeriod"
+            Value         "2"
+            Show          off
+          }
+          Parameter {
+            Variable      "RepCtrEvent"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "RepCtrEventViewOnly"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "BreakMode"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "BreakPort"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "BreakPin"
+            Value         "6"
+            Show          off
+          }
+          Parameter {
+            Variable      "TargetPortIndices"
+            Value         "1"
+            Show          off
+          }
+          Terminal {
+            Type          Input
+            Position      [-25, 0]
+            Direction     left
+          }
+          Terminal {
+            Type          EventOutput
+            Position      [29, 15]
+            Direction     right
+          }
+          Terminal {
+            Type          EventOutput
+            Position      [29, -15]
+            Direction     right
+          }
+          Terminal {
+            Type          Input
+            Position      [-25, -10]
+            Direction     left
+          }
+          Terminal {
+            Type          Input
+            Position      [-25, 10]
+            Direction     left
+          }
+          Terminal {
+            Type          EventInput
+            Position      [0, -25]
+            Direction     up
+          }
+        }
+        Component {
+          Type          Reference
+          SrcComponent  "STM32_Lib/HRTIM/HRTIM Master"
+          Name          "HRTIM Master"
+          Show          on
+          Position      [465, 305]
+          Direction     up
+          Flipped       off
+          LabelPosition south
+          Frame         [-45, -25; 45, 25]
+          Parameter {
+            Variable      "HrtimUnit"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "CarrierFreq"
+            Value         "100e3"
+            Show          off
+          }
+          Parameter {
+            Variable      "CarrierFreqTol"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "VarFreq"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "OutputEnable"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "ExternalSync"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "AdcTrigger"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "TaskTrigger"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "RepCtrPeriod"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "BurstMode"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "BurstFreq"
+            Value         "100"
+            Show          off
+          }
+          Parameter {
+            Variable      "TargetPortIndices"
+            Value         ""
+            Show          off
+          }
+          Terminal {
+            Type          EventOutput
+            Position      [49, 15]
+            Direction     right
+          }
+          Terminal {
+            Type          EventOutput
+            Position      [49, -15]
+            Direction     right
+          }
+          Terminal {
+            Type          Input
+            Position      [-45, -10]
+            Direction     left
+          }
+          Terminal {
+            Type          EventOutput
+            Position      [49, 0]
+            Direction     right
+          }
+          Terminal {
+            Type          Input
+            Position      [-45, 0]
+            Direction     left
+          }
+          Terminal {
+            Type          Input
+            Position      [-45, 10]
+            Direction     left
+          }
+          Terminal {
+            Type          EventInput
+            Position      [0, -25]
+            Direction     up
+          }
+        }
+        Component {
+          Type          Reference
+          SrcComponent  "STM32_Lib/HRTIM/HRTIM Timing Unit"
+          Name          "PWMA_"
+          Show          on
+          Position      [645, 410]
+          Direction     up
+          Flipped       off
+          LabelPosition south
+          Frame         [-45, -25; 45, 25]
+          Parameter {
+            Variable      "HrtimUnit"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "TimingUnit"
+            Value         "4"
+            Show          off
+          }
+          Parameter {
+            Variable      "ExternalSync"
+            Value         "2"
+            Show          off
+          }
+          Parameter {
+            Variable      "CarrierType"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "CarrierFreq"
+            Value         "10e3"
+            Show          off
+          }
+          Parameter {
+            Variable      "CarrierFreqTol"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "VarFreq"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "PhaseShift"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "ShowEnable"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "ChMode"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "ChOutput"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "Polarity"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "Ch1Polarity"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "Ch2Polarity"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "DeadTime"
+            Value         "0.25e-6"
+            Show          off
+          }
+          Parameter {
+            Variable      "IdleState1"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "IdleState2"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "AdcTrigger"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "TrigEvent"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "TaskTrigger"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "RepCtrPeriod"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "RepCtrEvent"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "RepCtrEventViewOnly"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "BurstMode"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "FaultState1"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "FaultState2"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "TargetPortIndices"
+            Value         "2"
+            Show          off
+          }
+          Terminal {
+            Type          Input
+            Position      [-45, 0]
+            Direction     left
+          }
+          Terminal {
+            Type          Input
+            Position      [-45, -10]
+            Direction     left
+          }
+          Terminal {
+            Type          EventInput
+            Position      [0, -25]
+            Direction     up
+          }
+          Terminal {
+            Type          Input
+            Position      [-45, 10]
+            Direction     left
+          }
+          Terminal {
+            Type          EventOutput
+            Position      [49, 15]
+            Direction     right
+          }
+          Terminal {
+            Type          EventOutput
+            Position      [49, -15]
+            Direction     right
+          }
+          Terminal {
+            Type          EventOutput
+            Position      [49, 0]
+            Direction     right
+          }
+          Terminal {
+            Type          Input
+            Position      [-45, 10]
+            Direction     left
+          }
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "Constant"
+          SrcTerminal   1
+          Points        [205, 140]
+          Branch {
+            DstComponent  "PWM"
+            DstTerminal   1
+          }
+          Branch {
+            Points        [205, 410]
+            DstComponent  "PWMA_"
+            DstTerminal   1
+          }
+        }
+        Connection {
+          Type          Event
+          SrcComponent  "HRTIM Master"
+          SrcTerminal   4
+          Points        [645, 305]
+          DstComponent  "PWMA_"
+          DstTerminal   3
+        }
+      }
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Sub"
+      SrcTerminal   1
+      DstComponent  "Scope"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Sub"
+      SrcTerminal   2
+      DstComponent  "Scope"
+      DstTerminal   2
+    }
+  }
+}
+DemoSignature "stbB/CRKvjKeJ62q6tP4nX9w7CcS5k/8fvRNgQFxtHI="
