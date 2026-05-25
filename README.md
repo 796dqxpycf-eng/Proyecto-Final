@@ -1,37 +1,81 @@
-# Convertidor Buck Sincrónico para Aplicaciones Fotovoltaicas usando STM32
+/*
+==================================================
+ PROYECTO FINAL
+ Convertidor Buck con STM32
+==================================================
 
-## Descripción General
+Descripción:
+Sistema encargado de regular el voltaje de un
+panel solar utilizando un convertidor Buck
+controlado mediante un STM32.
 
-Este proyecto consiste en el diseño e implementación de un convertidor DC-DC tipo Buck sincrónico controlado mediante un microcontrolador STM32 para aplicaciones fotovoltaicas. El sistema regula la energía proveniente de un panel solar con parámetros aproximados de:
+==================================================
+ FUNCIONAMIENTO
+==================================================
 
-- Voltaje máximo del panel: 45V
-- Corriente máxima: 10A
-- Potencia aproximada: 450W
+Panel Solar → Buck → Carga
 
-El objetivo principal es reducir y controlar el voltaje del panel solar mediante PWM utilizando un STM32 y una etapa de potencia basada en MOSFETs.
+STM32 → Driver IR2110 → MOSFETs
 
----
+El STM32 genera PWM para controlar los MOSFETs
+y regular el voltaje de salida.
 
-# Objetivos del Proyecto
+==================================================
+ COMPONENTES PRINCIPALES
+==================================================
 
-## Objetivo General
+STM32F103C8T6
+→ Control del sistema
 
-Diseñar un convertidor Buck controlado digitalmente mediante STM32 para regulación de energía fotovoltaica.
+IR2110
+→ Driver de compuerta
 
-## Objetivos Específicos
+IRFP460PBF
+→ MOSFETs de potencia
 
-- Implementar control PWM.
-- Regular voltaje de salida.
-- Monitorear corriente y voltaje mediante ADC.
-- Implementar protecciones electrónicas.
-- Diseñar PCB en KiCad.
-- Generar documentación técnica y BOM.
+100uH
+→ Inductor principal
 
----
+Capacitores
+→ Filtrado de ruido y ripple
 
-# Arquitectura General del Sistema
+10mΩ Shunt
+→ Medición de corriente
 
-```text
-Panel Solar → Convertidor Buck → Filtro LC → Carga
+==================================================
+ ADC
+==================================================
 
-STM32 → Driver MOSFET → MOSFETs de Potencia
+El ADC mide:
+
+- Voltaje de entrada
+- Voltaje de salida
+- Corriente
+
+El STM32 soporta máximo 3.3V,
+por eso se utilizan divisores resistivos.
+
+==================================================
+ PROTECCIONES
+==================================================
+
+- Sobrecorriente
+- Sobrevoltaje
+- Protección térmica
+
+Si ocurre una falla:
+→ El PWM se deshabilita.
+
+==================================================
+ PCB
+==================================================
+
+Diseñado en KiCad considerando:
+
+- Pistas anchas
+- Plano de tierra
+- Separación potencia/control
+- Disipación térmica
+
+==================================================
+*/
