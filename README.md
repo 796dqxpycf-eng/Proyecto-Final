@@ -2,6 +2,7 @@
 ========================================================
  PROYECTO FINAL
  Convertidor Buck Sincrónico usando STM32
+========================================================
 
 Descripción:
 Este proyecto consiste en el diseño e implementación
@@ -13,7 +14,7 @@ que controlan MOSFETs de potencia mediante un driver
 IR2110, permitiendo reducir y regular el voltaje de
 salida de manera eficiente y segura.
 
-
+========================================================
  FUNCIONAMIENTO GENERAL
 ========================================================
 
@@ -28,7 +29,7 @@ La regulación del voltaje depende del Duty Cycle PWM:
 
 Vout = D × Vin
 
-
+========================================================
  COMPONENTES PRINCIPALES
 ========================================================
 
@@ -50,7 +51,7 @@ Capacitores
 10mΩ Shunt
 → Medición de corriente
 
-
+========================================================
  ADC Y MONITOREO
 ========================================================
 
@@ -63,7 +64,7 @@ El ADC del STM32 mide:
 Como el ADC soporta máximo 3.3V,
 se utilizan divisores resistivos para protección.
 
-
+========================================================
  PROTECCIONES
 ========================================================
 
@@ -74,7 +75,7 @@ se utilizan divisores resistivos para protección.
 Si ocurre una falla:
 → El PWM se deshabilita automáticamente.
 
-
+========================================================
  PCB EN KICAD
 ========================================================
 
@@ -86,7 +87,7 @@ El PCB fue diseñado considerando:
 - Disipación térmica
 - Reducción de ruido EMI
 
-
+========================================================
  RESULTADOS ESPERADOS
 ========================================================
 
@@ -95,6 +96,7 @@ El PCB fue diseñado considerando:
 - Protección del sistema
 - Monitoreo en tiempo real
 
-
+========================================================
+*/
 
 
