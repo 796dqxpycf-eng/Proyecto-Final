@@ -9,14 +9,20 @@ Emiliano Olaya Tobias,
 Gael Hurtado.
  
 Descripción:
-Este proyecto consiste en el diseño e implementación
-de un convertidor DC-DC tipo Buck para regular la
-energía proveniente de un panel solar de 45V y 10A.
+Diseño e implementación de un convertidor Buck
+sincrónico para regular energía de un panel solar
+de 45V y 10A utilizando un STM32.
 
-El sistema utiliza un STM32 para generar señales PWM
-que controlan MOSFETs de potencia mediante un driver
-IR2110, permitiendo reducir y regular el voltaje de
-salida de manera eficiente y segura.
+El sistema usa PWM para controlar MOSFETs mediante
+un driver IR2110, permitiendo una conversión de
+energía eficiente y estable.
+
+Durante el proyecto se realizaron prácticas de:
+•⁠  ⁠Blink LED
+•⁠  ⁠PWM complementario
+•⁠  ⁠Control con driver IR2110
+•⁠  ⁠ADC y monitoreo
+
 
 
  FUNCIONAMIENTO GENERAL
